@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>赵韩斌 | Hanbin Zhao — 学术主页</title>
+<meta name="description" content="赵韩斌（Hanbin Zhao），独立研究者。提出柔固转换（Stiffness-Switching）、热重分布（Heat Redistribution）、物理智能（Physical Intelligence）三大原创设计范式。基于形状记忆合金（SMA）的固态相变，探索从自适应装置到非冯·诺依曼物理计算的通用设计方法论。">
+<meta name="keywords" content="SMA, 形状记忆合金, 柔固转换, Stiffness-Switching, 热重分布, Heat Redistribution, 物理智能, Physical Intelligence, 非冯·诺依曼, 物理计算, 以身为器, 水之心, 形状记忆合金, 自适应装置, 恒力控制, 冲击吸能, 第一性原理">
+
+<!-- Schema.org markup for Google Scholar -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Hanbin Zhao",
+  "givenName": "Hanbin",
+  "familyName": "Zhao",
+  "alternateName": "赵韩斌",
+  "description": "独立研究者，提出柔固转换（Stiffness-Switching）、热重分布（Heat Redistribution）、物理智能（Physical Intelligence）三大原创设计范式",
+  "url": "https://hanbin-zhao.github.io",
+  "sameAs": [
+    "https://orcid.org/0009-0007-6464-076X",
+    "https://zenodo.org/search?q=%20Zhao%20H."
+  ]
+}
+</script>
+
+<style>
+/* ===== Reset & Base ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans SC', system-ui, sans-serif;
+  background: #fafafa;
+  color: #1a1a2e;
+  line-height: 1.7;
+}
+a { color: #2563eb; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img, svg { max-width: 100%; display: block; }
+
+/* ===== Container ===== */
+.container { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+
+/* ===== Header / Hero ===== */
+.hero {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+  color: #f1f5f9;
+  padding: 72px 0 56px;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 4px;
+}
+.hero .name-en { font-size: 1.25rem; font-weight: 400; color: #94a3b8; }
+.hero .tagline {
+  margin-top: 16px;
+  font-size: 1.05rem;
+  color: #cbd5e1;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero .badges {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+.hero .badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-size: 0.85rem;
+  color: #e2e8f0;
+  transition: background 0.2s;
+}
+.hero .badge:hover { background: rgba(255,255,255,0.15); text-decoration: none; color: #fff; }
+.hero .badge svg { width: 16px; height: 16px; fill: currentColor; }
+
+/* ===== Section ===== */
+.section {
+  padding: 48px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+.section:last-child { border-bottom: none; }
+.section h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.section h2::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 24px;
+  background: #2563eb;
+  border-radius: 2px;
+}
+
+/* ===== About ===== */
+.about p { margin-bottom: 14px; color: #334155; font-size: 0.98rem; }
+.about p:last-child { margin-bottom: 0; }
+
+/* ===== Paradigms ===== */
+.paradigm-grid { display: flex; flex-direction: column; gap: 18px; }
+.paradigm-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 22px 26px;
+  transition: box-shadow 0.2s;
+}
+.paradigm-card:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.06); }
+.paradigm-card h3 {
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+.paradigm-card .sub { font-size: 0.85rem; color: #64748b; margin-bottom: 8px; }
+.paradigm-card p { font-size: 0.94rem; color: #475569; line-height: 1.65; }
+
+/* ===== Publications ===== */
+.pub-list { display: flex; flex-direction: column; gap: 10px; }
+.pub-item {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  padding: 10px 16px;
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #f1f5f9;
+  font-size: 0.93rem;
+  transition: background 0.15s;
+}
+.pub-item:hover { background: #f8fafc; }
+.pub-year {
+  flex-shrink: 0;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #64748b;
+  background: #f1f5f9;
+  border-radius: 4px;
+  padding: 1px 8px;
+  margin-top: 2px;
+}
+.pub-info { flex: 1; }
+.pub-title { font-weight: 500; color: #0f172a; }
+.pub-doi { font-size: 0.82rem; color: #64748b; margin-top: 1px; }
+.pub-doi a { color: #2563eb; }
+.pub-note { font-size: 0.78rem; color: #10b981; font-weight: 500; flex-shrink: 0; }
+
+/* ===== Keywords ===== */
+.tag-cloud { display: flex; flex-wrap: wrap; gap: 8px; }
+.tag {
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 4px 14px;
+  font-size: 0.82rem;
+  color: #334155;
+  transition: all 0.15s;
+}
+.tag:hover { background: #2563eb; color: #fff; border-color: #2563eb; }
+
+/* ===== CTA ===== */
+.cta {
+  text-align: center;
+  padding: 40px 0 48px;
+}
+.cta p { color: #64748b; font-size: 0.92rem; margin-bottom: 16px; }
+.cta .btn {
+  display: inline-block;
+  background: #2563eb;
+  color: #fff;
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+}
+.cta .btn:hover { background: #1d4ed8; text-decoration: none; }
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 24px 0;
+  font-size: 0.8rem;
+  color: #94a3b8;
+  border-top: 1px solid #e2e8f0;
+}
+footer a { color: #64748b; }
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  .hero { padding: 48px 0 36px; }
+  .hero h1 { font-size: 1.7rem; }
+  .section { padding: 32px 0; }
+  .pub-item { flex-wrap: wrap; gap: 6px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== HERO ===== -->
+<header class="hero">
+  <div class="container">
+    <h1>赵韩斌</h1>
+    <div class="name-en">Hanbin Zhao</div>
+    <div class="tagline">
+      独立研究者 · 临床医生 · OSA患者&ensp;|&ensp;以身为器，从第一性原理出发<br>
+      建立柔固转换、热重分布、物理智能三大原创设计范式
+    </div>
+    <div class="badges">
+      <a class="badge" href="https://orcid.org/0009-0007-6464-076X" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zM7.5 17.5h-3V7h3v10.5zM9 6.5c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5 1.5.7 1.5 1.5-.7 1.5-1.5 1.5zm9 11h-3v-5.5c0-1.4-.5-2.5-2-2.5s-2.5 1.1-2.5 2.5v5.5h-3v-10.5h3v1.5c.6-1 1.8-1.8 3-1.8 2.2 0 4.5 1.5 4.5 5.2v5.6z"/></svg>
+        ORCID
+      </a>
+      <a class="badge" href="https://zenodo.org/search?q=Zhao%20H." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14l-4-4 1.41-1.41L11 14.17l6.59-6.59L19 9l-8 8z"/></svg>
+        Zenodo
+      </a>
+      <a class="badge" href="https://engrxiv.org/search?q=hanbin+zhao" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        EngrXiv
+      </a>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+<!-- ===== ABOUT ===== -->
+<section class="section about">
+  <h2>关于</h2>
+  <p>
+    我是一名在小县城精神专科医院工作的临床医生，也是一名阻塞性睡眠呼吸暂停（OSA）患者。
+    从自身病痛出发，我以"以身为器"为方法论——将自己的体感体验作为第一性原理推理的锚定点，
+    逐步建立了覆盖力学、热学、智能理论的原创设计范式体系。
+  </p>
+  <p>
+    所有研究始于对"气道塌陷怎么办"这个具体问题的追问，最终通向两条主线：
+    <strong>SMA 柔固转换（力学）→ 热重分布（热学）→ 物理智能（材料即程序）→ 非冯·诺依曼物理计算</strong>。
+    所有概念、设计原则和范式均为独立提出。
+  </p>
+</section>
+
+<!-- ===== THREE PARADIGMS ===== -->
+<section class="section">
+  <h2>三层范式体系</h2>
+  <div class="paradigm-grid">
+
+    <div class="paradigm-card">
+      <h3>Ⅰ · 柔固转换 <span style="font-weight:400;color:#64748b;font-size:0.9rem;">Stiffness-Switching</span></h3>
+      <div class="sub">力学范式 · 基于 SMA 马氏体↔奥氏体相变</div>
+      <p>将形状记忆合金在马氏体态（柔性/可压缩）与奥氏体态（刚性/高吸能）之间的可逆相变，抽象为通用的"软-硬切换"设计范式。包含 4 大功能输出和 10 条原创设计原则（缝合但不收紧、八字锚固空间辐向网络、点状驱动周边吸能、变截面梯度力编程等），覆盖恒力贴合、冲击吸能、多级力控、腔内支撑四大领域。</p>
+    </div>
+
+    <div class="paradigm-card">
+      <h3>Ⅱ · 热重分布 <span style="font-weight:400;color:#64748b;font-size:0.9rem;">Heat Redistribution</span></h3>
+      <div class="sub">热学范式 · "热管理即流体管理"</div>
+      <p>热不再是一个负担，而是可以定向引导的资源。基于 SMA 相界面传播的三种热传输模式（稳态单向传播、往复振荡、变形触发传播）和八条设计原则。核心系统实现为"水之心"仿生脉动热泵——利用 SMA 起搏器触发水的爆炸性沸腾，实现 20-100 倍的能效放大。</p>
+    </div>
+
+    <div class="paradigm-card">
+      <h3>Ⅲ · 物理智能 <span style="font-weight:400;color:#64748b;font-size:0.9rem;">Physical Intelligence</span></h3>
+      <div class="sub">智能范式 · "物理本身就是程序"</div>
+      <p>用材料的本构行为（相变、超弹性平台、形状记忆效应）取代电子传感器、控制器和电源，实现整个感知-决策-执行回路中没有任何电子元件。包含 6 条公理体系、6 种候选材料的跨材料工具包、4 种多材料协同模式。开辟了电子智能无法进入的领域：深空、人体内部、高温、强辐射、微重力。</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== PUBLICATIONS ===== -->
+<section class="section">
+  <h2>已发表论文</h2>
+  <div class="pub-list">
+
+    <div class="pub-item">
+      <span class="pub-year">2026</span>
+      <div class="pub-info">
+        <div class="pub-title">Stiffness-Switching: A Universal Design Paradigm Based on SMA Phase Transformation (v3)</div>
+        <div class="pub-doi"><a href="https://doi.org/10.5281/zenodo.20666920" target="_blank" rel="noopener">10.5281/zenodo.20666920</a></div>
+      </div>
+      <span class="pub-note">母范式</span>
+    </div>
+
+    <div class="pub-item">
+      <span class="pub-year">2026</span>
+      <div class="pub-info">
+        <div class="pub-title">Stitch but Not Tighten: Design Principles and Medical Applications of SMA Flexible Connections</div>
+        <div class="pub-doi"><a href="https://doi.org/10.5281/zenodo.20488766" target="_blank" rel="noopener">10.5281/zenodo.20488766</a></div>
+      </div>
+      <span class="pub-note">涟漪二</span>
+    </div>
+
+    <div class="pub-item">
+      <span class="pub-year">2026</span>
+      <div class="pub-info">
+        <div class="pub-title">Octa-Anchor Radial Web and Point-Actuation: Synergistic Design Principles for SMA Spatial Protection</div>
+        <div class="pub-doi"><a href="https://doi.org/10.5281/zenodo.20541972" target="_blank" rel="noopener">10.5281/zenodo.20541972</a> / <a href="https://doi.org/10.31224/7263" target="_blank" rel="noopener">10.31224/7263</a></div>
+      </div>
+      <span class="pub-note">涟漪三</span>
+    </div>
+
+    <div class="pub-item">
+      <span class="pub-year">2026</span>
+      <div class="pub-info">
+        <div class="pub-title">Variable Cross-Section Gradient Force Programming: Pure Mechanical Multi-Stage Force Control</div>
+        <div class="pub-doi"><a href="https://doi.org/10.5281/zenodo.20629093" target="_blank" rel="noopener">10.5281/zenodo.20629093</a></div>
+      </div>
+      <span class="pub-note">涟漪四</span>
+    </div>
+
+    <div class="pub-item">
+      <span class="pub-year">2026</span>
+      <div class="pub-info">
+        <div class="pub-title">Staged and Graded Force Application: Clinical Translation of SMA in Orthopedic External Fixation</div>
+        <div class="pub-doi"><a href="https://doi.org/10.5281/zenodo.20668414" target="_blank" rel="noopener">10.5281/zenodo.20668414</a></div>
+      </div>
+      <span class="pub-note">涟漪五</span>
+    </div>
+
+    <div class="pub-item">
+      <span class="pub-year">2026</span>
+      <div class="pub-info">
+        <div class="pub-title">Heat Redistribution: A Thermal Management Paradigm Based on Phase Interface Propagation in SMAs (v2)</div>
+        <div class="pub-doi"><a href="https://doi.org/10.5281/zenodo.20610597" target="_blank" rel="noopener">10.5281/zenodo.20610597</a></div>
+      </div>
+      <span class="pub-note">热学母范式</span>
+    </div>
+
+    <div class="pub-item">
+      <span class="pub-year">2026</span>
+      <div class="pub-info">
+        <div class="pub-title">Water-Heart: A Biomimetic Pulsating Heat Pump System Based on SMA Physical Intelligence (v2)</div>
+        <div class="pub-doi"><a href="https://doi.org/10.5281/zenodo.20610655" target="_blank" rel="noopener">10.5281/zenodo.20610655</a> / <a href="https://doi.org/10.31224/7286" target="_blank" rel="noopener">10.31224/7286</a></div>
+      </div>
+      <span class="pub-note">水之心</span>
+    </div>
+
+    <div class="pub-item">
+      <span class="pub-year">2026</span>
+      <div class="pub-info">
+        <div class="pub-title">Parallel Clamping: A Thermal Peak Management System Based on SMA and Thermochemical Energy Storage</div>
+        <div class="pub-doi"><a href="https://doi.org/10.5281/zenodo.20580228" target="_blank" rel="noopener">10.5281/zenodo.20580228</a></div>
+      </div>
+      <span class="pub-note">热峰钳制</span>
+    </div>
+
+    <div class="pub-item">
+      <span class="pub-year">2026</span>
+      <div class="pub-info">
+        <div class="pub-title">Physical Intelligence: A Paradigm for Electronics-Free Adaptive Systems (v2)</div>
+        <div class="pub-doi"><a href="https://doi.org/10.5281/zenodo.20610681" target="_blank" rel="noopener">10.5281/zenodo.20610681</a></div>
+      </div>
+      <span class="pub-note">物理智能</span>
+    </div>
+
+    <div class="pub-item">
+      <span class="pub-year">2026</span>
+      <div class="pub-info">
+        <div class="pub-title">Physical Computing: Theories and Designs of Material Phase Transition, Physical Intelligence, and Non-Von Neumann Architectures</div>
+        <div class="pub-doi"><a href="https://doi.org/10.5281/zenodo.20642739" target="_blank" rel="noopener">10.5281/zenodo.20642739</a> (EN) / <a href="https://doi.org/10.5281/zenodo.20642471" target="_blank" rel="noopener">10.5281/zenodo.20642471</a> (CN)</div>
+      </div>
+      <span class="pub-note">物理计算</span>
+    </div>
+
+    <div class="pub-item">
+      <span class="pub-year">2026</span>
+      <div class="pub-info">
+        <div class="pub-title">The Body as the Instrument: An Anchoring Operation for First Principles Thinking</div>
+        <div class="pub-doi"><a href="https://doi.org/10.5281/zenodo.20581184" target="_blank" rel="noopener">10.5281/zenodo.20581184</a></div>
+      </div>
+      <span class="pub-note">方法论</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== METHODOLOGY ===== -->
+<section class="section">
+  <h2>方法论：以身为器</h2>
+  <p style="color:#334155;font-size:0.95rem;">
+    第一性原理的锚定操作方法——将个人对病痛的真实体感作为推理的起点。四步流程：
+    <strong>以身为器</strong>（体感锚定）→ <strong>翻译约束</strong>（体感→工程参数）→
+    <strong>逆向匹配</strong>（参数→物理方案）→ <strong>提取原则</strong>（方案→通用范式）。
+    不要求特定学科背景，任何有真实、无法回避的痛点的人都可以使用。
+  </p>
+</section>
+
+<!-- ===== KEYWORDS ===== -->
+<section class="section">
+  <h2>关键词</h2>
+  <div class="tag-cloud">
+    <span class="tag">Shape Memory Alloy</span>
+    <span class="tag">形状记忆合金</span>
+    <span class="tag">Stiffness-Switching</span>
+    <span class="tag">柔固转换</span>
+    <span class="tag">Superelasticity</span>
+    <span class="tag">超弹性</span>
+    <span class="tag">Martensitic Phase Transformation</span>
+    <span class="tag">马氏体相变</span>
+    <span class="tag">Physical Intelligence</span>
+    <span class="tag">物理智能</span>
+    <span class="tag">Heat Redistribution</span>
+    <span class="tag">热重分布</span>
+    <span class="tag">Water-Heart</span>
+    <span class="tag">水之心</span>
+    <span class="tag">Pulsating Heat Pump</span>
+    <span class="tag">脉动热泵</span>
+    <span class="tag">Physical Computing</span>
+    <span class="tag">物理计算</span>
+    <span class="tag">Non-Von Neumann</span>
+    <span class="tag">非冯·诺依曼</span>
+    <span class="tag">First-Principles Thinking</span>
+    <span class="tag">以身为器</span>
+    <span class="tag">Constant Force Control</span>
+    <span class="tag">恒力控制</span>
+    <span class="tag">Impact Energy Absorption</span>
+    <span class="tag">冲击吸能</span>
+    <span class="tag">Adaptive Device</span>
+    <span class="tag">自适应装置</span>
+    <span class="tag">Passive Thermal Management</span>
+    <span class="tag">无源热管理</span>
+    <span class="tag">Biomimetic Circulation</span>
+    <span class="tag">仿生循环</span>
+    <span class="tag">Medical Device Design</span>
+    <span class="tag">骨科外固定</span>
+    <span class="tag">Spacecraft Thermal Control</span>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<div class="cta">
+  <p>全部论文以开放获取（Open Access）形式发布于 Zenodo</p>
+  <a class="btn" href="https://zenodo.org/search?q=Zhao%20H." target="_blank" rel="noopener">查看全部论文 →</a>
+</div>
+
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2026 赵韩斌 Hanbin Zhao &nbsp;|&nbsp; <a href="https://orcid.org/0009-0007-6464-076X" target="_blank" rel="noopener">ORCID: 0009-0007-6464-076X</a></p>
+    <p style="margin-top:4px;">所有预印本以 Creative Commons 许可发布 &nbsp;|&nbsp; Built with GitHub Pages</p>
+  </div>
+</footer>
+
+</body>
+</html>
